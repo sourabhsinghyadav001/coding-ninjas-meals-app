@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meals app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <p class="w-100 text-center" id="navbar-text" title="goto homepage">
+        Meals app
+      </p>
+      <img
+        src="favorite.png"
+        alt="favorite"
+        class="icon ms-auto"
+        id="navbar-favorite"
+      />
+    </div>
+    <div id="search-container" class="centered-container">
+      <input id="search" />
+      <img class="icon ms-10" src="search.png" alt="search" />
+    </div>
+    <div id="results">
+      <div class="centered-container initial-results">
+        <h1>Your search results will appear here</h1>
+      </div>
+    </div>
+    <div id="favorites"></div>
+    <div
+      id="initial-results-template"
+      class="d-none centered-container initial-results"
+    >
+      <h1>Your search results will appear here</h1>
+    </div>
+    <div
+      id="loading-template"
+      class="d-none centered-container initial-results"
+    >
+      <h1>Loading...</h1>
+    </div>
+    <div id="error-template" class="d-none centered-container initial-results">
+      <h1>An error occured</h1>
+    </div>
+    <div
+      id="no-results-template"
+      class="d-none centered-container initial-results"
+    >
+      <h1>No results found</h1>
+    </div>
+    <div id="result-list-template" class="d-none result-list"></div>
+    <div id="result-item-template" class="d-none result-item cursorPointer">
+      <div class="result-item-img-container">
+        <img class="result-item-img" alt="meal" />
+      </div>
+      <div class="result-item-details-container w-100">
+        <div class="result-item-title-flex mb-10">
+          <h3 class="result-item-title text-cut-ellipsis"></h3>
+          <img
+            class="result-item-favorite icon"
+            alt="add to favorites"
+            src="add_favorite.png"
+          />
+        </div>
+        <div class="result-item-details clamp-5"></div>
+      </div>
+    </div>
+    <div id="mdp-template" class="d-none fullscreenHeight">
+      <div class="text-center mdp-img-container">
+        <figure>
+          <img alt="meal" class="mdp-img" />
+          <figcaption class="mdp-img-caption"></figcaption>
+        </figure>
+      </div>
+      <div class="centered-container">
+        <div class="mdp-details"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
